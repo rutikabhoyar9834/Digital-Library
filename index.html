@@ -1,95 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Resume</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        
-    
-        <div class="resume">
-            <div class="left">
-                <img src="Rutikaimage.jpeg" class="profile" alt="Profile Photo">
-                <h2>Rutika Bhoyar</h2>
-                <p>Information Technology Student</p>
-                <div class="section">
-                    <h3>Contact</h3>
-                    <p>📞 +91 9834559842</p>
-                    <p>✉ rutikabhoyar50@jdcoem.ac.in</p>
-                    <p>📍 Samudrapur</p>
-                </div>
-                <div class="section">
-                    <h3>Technical Skills</h3>
-                    <ul>
-                        <li>Basics of C Programming</li>
-                        <li>Basics of Python</li>
-                    </ul>
-                </div>
-                <div class="section">
-                    <h3>Certifications</h3>
-                    <ul>
-                        <li>NPTEL: Enhancing Soft Skills and Personality</li>
-                        <li>AICTE-Eduskill: AIML Virtual Internship</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="right">
-                <h1>Rutika Bhoyar</h1>
-                <p class="role">Information Technology Undergraduate Student</p>
-                <div class="ai-summary">
-                    <h3>AI Resume Summary</h3>
-                    <p id="summaryText">Click the button to generate AI summary.</p>
-                    <button onclick="generateSummary()">Generate Summary</button>
-                </div>
-                <div class="box">
-                    <h3>Objective</h3>
-                    <p>Information Technology undergraduate (4th Semester) student eager to learn emerging technologies. Basic understanding of programming languages like Python and Java. Working on improving coding skills and problem-solving ability.</p>
-                </div>
-                <div class="box">
-                    <h3>Education</h3>
-                    <ul>
-                        <li><b>B-Tech – Information Technology</b><br>JD College of Engineering and Management, Nagpur | 2025 | 9+ CGPA</li>
-                        <li><b>HSC</b><br>Dr. B. R. Ambedkar Jr. College, Hinganghat | 2024 | 66.50%</li>
-                        <li><b>SSC</b><br>Muktabai Vidyalaya, Samudrapur | 2022 | 82.60%</li>
-                    </ul>
-                </div>
-                <div class="box">
-                    <h3>Relevant Coursework</h3>
-                    <p>Python Programming | Basics of C Programming | Object Oriented Programming in C++</p>
-                </div>
-                <div class="box">
-                    <h3>Projects</h3>
-                        <b>I. Employee Record Management System</b>
-                        <ul>
-                            <li>Developed an employee record management application using Python and Tkinter</li>
-                            <li>Implemented CRUD operations (Add, View, Update, Delete)</li>
-                            <li>Designed a simple user-friendly interface</li>
-                            <li>Organized employee data efficiently</li>
-                            <li><b>Tools:</b> Python | Tkinter | SQLite</li>
-                        </ul>
-                        <br><b>II. Digital Platform for Peer-to-Peer Skill Exchange within Communities</b>
-                        <ul>
-                            <li>Created a platform to share and exchange skills without money</li>
-                            <li>Added user profiles, skill listings, and mentor matching features</li>
-                            <li>Designed secure user login and simple interface</li>
-                            <li>Promoted teamwork and knowledge sharing</li>
-                            <li><b>Tools:</b> Python | HTML | CSS | JavaScript</li>
-                        </ul>
-                </div>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📚Digital Library</h1>
+        <input type="text" id="Searchbar" placeholder="Find your favorite book...">
+    </header>
+    <section class="Book_Collection">
+        <button onclick="filterBooks('all')">📚 All</button>
+        <button onclick="filterBooks('Programming')">💻 Programming</button>
+        <button onclick="filterBooks('Story')">🏰 Story</button>
+        <button onclick="filterBooks('Science')">📡 Science</button>
+        <button onclick="filterBooks('Indian Arts')">⚔️ Indian Arts</button>
+        <button onclick="filterBooks('AI')">🤖 AI</button>
+    </section>
+    <h2>📖 Reading Collection</h2>
+    <div class="book-container" id="books">
+        <div class="card" data-category="Programming">
+            <img src="images/PythonBasics.png" alt="Python basics">
+            <h3>Python Basics</h3>
+            <p>Category: Programming</p>
+            <button onclick="issueBook(this)">Issue</button>
         </div>
-        <div class="chatbot">
-            <div class="chat-header">AI Assistant</div>
-            <div class="chat-body" id="chatBody">
-                <div class="bot-msg">Hello 👋 Ask me about Rutika's skills or projects.</div>
-            </div>
-            <div class="chat-input">
-                <input type="text" id="userInput" placeholder="Ask something...">
-                <button onclick="sendMessage()">Send </button>
-            </div>
+        <div class="card" data-category="Story">
+            <img src="images/WonderWood.png" alt="Wonder Wood">
+            <h3>Wonder Wood</h3>
+            <p>Category: Story</p>
+            <button onclick="issueBook(this)">Issue</button>
         </div>
-        <script src="script.js"></script>
-    </body>
-    </html>
+        <div class="card" data-category="Science">
+            <img src="images/RealWorldPhysics.png" alt="Real World Physics">
+            <h3>Real World Physics</h3>
+            <p>Category: Science</p>
+            <button onclick="issueBook(this)">Issue</button>
+        </div>
+        <div class="card" data-category="Programming">
+            <img src="images/CProgrammingforBeginners.png" alt="C Programming for Beginners">
+            <h3>C Programming for Beginners</h3>
+            <p>Category: Programming</p>
+            <button onclick="issueBook(this)">Issue</button>
+        </div>
+        <div class="card" data-category="AI">
+            <img src="images/AIClassroom.png" alt="">
+            <h3>The AI Classroom</h3>
+            <p>Category: AI</p>
+            <button onclick="issueBook(this)">Issue</button>
+        </div>
+        <div class="card" data-category="Science">
+            <img src="images/TheNatureofNature.png" alt="The Nature of Nature">
+            <h3>The Nature of Nature</h3>
+            <p>Category: Science</p>
+            <button onclick="issueBook(this)">Issue</button>
+        </div>
+        <div class="card" data-category="Indian Arts">
+            <img src="images/IndianCulture.png" alt="Indian Culture, Art and Heritage">
+            <h3>Indian Culture, Art and Heritage</h3>
+            <p>Category: Indian Art</p>
+            <button onclick="issueBook(this)">Issue</button>
+        </div>
+        <div class="card" data-category="Programming">
+            <img src="images/ProgrammingWithJava.png" alt="Programming with Java">
+            <h3>Programming with Java</h3>
+            <p>Category: Programming</p>
+            <button onclick="issueBook(this)">Issue</button>
+        </div>
+        <div class="card" data-category="Story">
+            <img src="images/TheStoryOfBook.png" alt="The Story of a Book">
+            <h3>The Story of a Book</h3>
+            <p>Category: Story</p>
+            <button onclick="issueBook(this)">Issue</button>
+        </div>
+        <div class="card" data-category="Indian Arts">
+            <img src="images/IndianArt.png" alt="Art in Education">
+            <h3>The  big Book of Indian Art</h3>
+            <p>Category: Indian Art</p>
+            <button onclick="issueBook(this)">Issue</button>
+        </div>
+        <div class="card" data-category="AI">
+            <img src="images/FinalInvention.png" alt="Our Final Invention">
+            <h3>Our Final Invention</h3>
+            <p>Category: AI</p>
+            <button onclick="issueBook(this)">Issue</button>
+        </div>
+        <div class="card" data-category="Story">
+            <img src="images/HarryPotter.png" alt="Harry Potter and The Sorcerers Stone">
+            <h3>Harry Potter and The Sorcerers Stone</h3>
+            <p>Category: Story</p>
+            <button onclick="issueBook(this)">Issue</button>
+        </div>
+        <section class="issued-section">
+            <h2>📚 Issued Books</h2>
+            <ul id="issuedList">
+                <li class="empty"> No books issued yet</li>
+            </ul>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
