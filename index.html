@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resume</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+    
+        <div class="resume">
+            <div class="left">
+                <img src="Rutikaimage.jpeg" class="profile" alt="Profile Photo">
+                <h2>Rutika Bhoyar</h2>
+                <p>Information Technology Student</p>
+                <div class="section">
+                    <h3>Contact</h3>
+                    <p>📞 +91 9834559842</p>
+                    <p>✉ rutikabhoyar50@jdcoem.ac.in</p>
+                    <p>📍 Samudrapur</p>
+                </div>
+                <div class="section">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Basics of C Programming</li>
+                        <li>Basics of Python</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>NPTEL: Enhancing Soft Skills and Personality</li>
+                        <li>AICTE-Eduskill: AIML Virtual Internship</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <h1>Rutika Bhoyar</h1>
+                <p class="role">Information Technology Undergraduate Student</p>
+                <div class="ai-summary">
+                    <h3>AI Resume Summary</h3>
+                    <p id="summaryText">Click the button to generate AI summary.</p>
+                    <button onclick="generateSummary()">Generate Summary</button>
+                </div>
+                <div class="box">
+                    <h3>Objective</h3>
+                    <p>Information Technology undergraduate (4th Semester) student eager to learn emerging technologies. Basic understanding of programming languages like Python and Java. Working on improving coding skills and problem-solving ability.</p>
+                </div>
+                <div class="box">
+                    <h3>Education</h3>
+                    <ul>
+                        <li><b>B-Tech – Information Technology</b><br>JD College of Engineering and Management, Nagpur | 2025 | 9+ CGPA</li>
+                        <li><b>HSC</b><br>Dr. B. R. Ambedkar Jr. College, Hinganghat | 2024 | 66.50%</li>
+                        <li><b>SSC</b><br>Muktabai Vidyalaya, Samudrapur | 2022 | 82.60%</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>Relevant Coursework</h3>
+                    <p>Python Programming | Basics of C Programming | Object Oriented Programming in C++</p>
+                </div>
+                <div class="box">
+                    <h3>Projects</h3>
+                        <b>I. Employee Record Management System</b>
+                        <ul>
+                            <li>Developed an employee record management application using Python and Tkinter</li>
+                            <li>Implemented CRUD operations (Add, View, Update, Delete)</li>
+                            <li>Designed a simple user-friendly interface</li>
+                            <li>Organized employee data efficiently</li>
+                            <li><b>Tools:</b> Python | Tkinter | SQLite</li>
+                        </ul>
+                        <br><b>II. Digital Platform for Peer-to-Peer Skill Exchange within Communities</b>
+                        <ul>
+                            <li>Created a platform to share and exchange skills without money</li>
+                            <li>Added user profiles, skill listings, and mentor matching features</li>
+                            <li>Designed secure user login and simple interface</li>
+                            <li>Promoted teamwork and knowledge sharing</li>
+                            <li><b>Tools:</b> Python | HTML | CSS | JavaScript</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot">
+            <div class="chat-header">AI Assistant</div>
+            <div class="chat-body" id="chatBody">
+                <div class="bot-msg">Hello 👋 Ask me about Rutika's skills or projects.</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Ask something...">
+                <button onclick="sendMessage()">Send </button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
